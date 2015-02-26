@@ -1,6 +1,6 @@
 /*
 Plugin Name: WPXML2Agregagtor 
-Plugin URI: http://marcolombardini.github.com/
+Plugin URI: https://github.com/marcolombardini/wpxml2aggregator
 Description: WordPress plugin that creates an XML file from posts and lets aggregators sync to thier websites, Mainly for real estate
 Version: .1
 Author: Marco Lombardini
