@@ -9,7 +9,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 global $query_string;
 	$args = array(
 		'numberposts'     => '',
-		'posts_per_page'  => 10,
+		'posts_per_page'  => 45,
 		'offset'          => 0,
 		'cat'       	  =>  '',
 		'orderby'         => 'date',
@@ -21,14 +21,13 @@ global $query_string;
 		'post_type'       => 'property',
 		'post_mime_type'  => '',
 		'post_parent'     => '',
-		'paged'			  => '',
+		'paged'		  => '',
 		'post_status'     => 'publish'
 	);
 query_posts( $args );?>
 
-<?php while( have_posts()) : the_post(); ?>
-
 <Listings>
+<?php while( have_posts()) : the_post(); ?>
  <Listing>
   <Location>
    <StreetAddress></StreetAddress>
@@ -88,7 +87,10 @@ query_posts( $args );?>
    <PictureUrl></PictureUrl>
    <Caption></Caption>
    </Picture><Picture>
-   <PictureUrl></PictureUrl>
+   <PictureUrl><?php if (has_post_thumbnail() ):
+      		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+      		echo $image[0]; ?>
+      		<?php endif; ?></PictureUrl>
    <Caption></Caption>
   </Picture>
  </Pictures>
@@ -196,6 +198,8 @@ query_posts( $args );?>
     <CableSatTV></CableSatTV>
     <Taxes></Taxes>
  </RichDetails>
+<?php rss_enclosure(); ?>
+<?php do_action('rss2_item'); ?>
  </Listing>
-</Listings>
 <?php endwhile; ?>
+</Listings>
