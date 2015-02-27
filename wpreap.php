@@ -6,7 +6,7 @@
  * Author: Marco Lombardini
  * Author URI: http://marcolombardini.com
  * Author Email: marco.lombardini@gmail.com
- * Version: Beta 0.1
+ * Version: 0.1
  * Version Date: 2/26/15
  */
 
