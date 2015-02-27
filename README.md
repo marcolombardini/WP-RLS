@@ -3,7 +3,7 @@ Plugin URI: https://github.com/marcolombardini/wpreap
 Author: Marco Lombardini     
 Author URI: http://marcolombardini.com     
 Author Email: marco.lombardini@gmail.com    
-Version: Beta 0.1    
+Version: 0.1    
 Version Date: 2/26/15    
 
 This is a plugin designed to create an XML File so real estate aggregators can syndicate listings from your WordPress powered website.     
