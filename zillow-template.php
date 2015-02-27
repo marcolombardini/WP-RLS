@@ -198,8 +198,6 @@ query_posts( $args );?>
     <CableSatTV></CableSatTV>
     <Taxes></Taxes>
  </RichDetails>
-<?php rss_enclosure(); ?>
-<?php do_action('rss2_item'); ?>
  </Listing>
 <?php endwhile; ?>
 </Listings>
