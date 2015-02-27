@@ -1,25 +1,11 @@
 /*
-Plugin Name: WPXML2Agregagtor 
-Plugin URI: https://github.com/marcolombardini/wpxml2aggregator
-Description: WordPress plugin that creates an XML file from posts and lets aggregators sync to thier websites, Mainly for real estate
-Version: .1
-Author: Marco Lombardini
-Author URI: http://www.marcolombardini.com
+Plugin Name: WPREAP       
+Plugin URI: https://github.com/marcolombardini/wpreap       
+Description: WordPress Real Estate Aggregator Plugin creates an XML file from posts and lets aggregators syndicate to thier websites          
+Version: Beta .1    
+Author: Marco Lombardini    
+Author URI: http://www.marcolombardini.com     
 License: GPL2
 */
 /*
 Copyright 2015  Marco Lombardini  (email : marco.lombardini@gmail.com)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as 
-published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
