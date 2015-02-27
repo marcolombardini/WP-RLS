@@ -10,7 +10,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 global $query_string;
 	$args = array(
 		'numberposts'     => '',
-		'posts_per_page'  => 1,
+		'posts_per_page'  => 45,
 		'offset'          => 0,
 		'cat'       	  =>  '',
 		'orderby'         => 'date',
@@ -27,9 +27,8 @@ global $query_string;
 	);
 query_posts( $args );?>
 
+ <streeteasy version="1.6">
 <?php while( have_posts()) : the_post(); ?>
-
-<streeteasy version="1.6">
   <properties>
     <property status="active" type="sale" id="<?php the_ID(); ?>" url="<?php the_permalink_rss() ?>">
       <location>
@@ -90,5 +89,5 @@ query_posts( $args );?>
       </agents>
     </property>
   </properties>
-</streeteasy>
 <?php endwhile; ?>
+</streeteasy>
