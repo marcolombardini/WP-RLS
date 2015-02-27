@@ -1,5 +1,6 @@
 <?php
 /**
+ * WPREAP WordPress Real Estate Aggregator Plugin
  * Streeteasy XML feed generator template.
  */
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
