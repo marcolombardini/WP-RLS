@@ -8,4 +8,4 @@ Are you a theme developer or real estate professional and want to test out the p
 
 #####This plugin is UNTESTED and is still in beta. Use at your own risk.
 
-To see a list of Agreggators and infomration about xml specifications check out the wiki 
+To see a list ofAggregators and information about xml specifications check out the wiki 
