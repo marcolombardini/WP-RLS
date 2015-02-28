@@ -6,4 +6,6 @@ The current version only supports one specific theme but can be easily customize
 
 Are you a theme developer or real estate professional and want to test out the plugin? Send me an email above to see how you can get a beta version for your site or theme.    
 
-This plugin is UNTESTED and is still in beta. Use at your own risk. 
+See a list of Agreggators [here](https://github.com/marcolombardini/WPREAP/wiki) and infomration about xml specifications [here](https://github.com/marcolombardini/WPREAP/wiki)     
+
+###This plugin is UNTESTED and is still in beta. Use at your own risk. 
