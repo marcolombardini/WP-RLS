@@ -6,8 +6,6 @@ The current version only supports one specific theme but can be easily customize
 
 Are you a theme developer or real estate professional and want to test out the plugin? Send me an email above to see how you can get a beta version for your site or theme.    
 
-To see a list of Agreggators and infomration about xml specifications check out the wiki     
-
 #####This plugin is UNTESTED and is still in beta. Use at your own risk.
 
 To see a list of Agreggators and infomration about xml specifications check out the wiki 
