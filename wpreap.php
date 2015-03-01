@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WPREAP (WordPress Real Estate Aggregator Plugin)
+ * Plugin Name: wpREAP Real Estate Aggregator Plugin
  * Plugin URI: https://github.com/marcolombardini/wpreap
  * Description: This plugin is designed to create an XML File so real estate aggregators can syndicate listings from your WordPress powered website.
  * Author: Marco Lombardini
