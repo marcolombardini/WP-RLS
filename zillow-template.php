@@ -1,6 +1,6 @@
 <?php
 /**
- * Zillow XML feed generator template.
+ * Zillow XML feed generator template. 
  */
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
@@ -30,17 +30,17 @@ query_posts( $args );?>
 <?php while( have_posts()) : the_post(); ?>
  <Listing>
   <Location>
-   <StreetAddress></StreetAddress>
-   <UnitNumber></UnitNumber>
-   <City></City>
-   <State></State>
-   <Zip></Zip>
+   <StreetAddress><?php echo get_post_meta($post->ID, "nt_prop_add", true);?></StreetAddress>
+   <UnitNumber><?php echo get_post_meta($post->ID, "nt_unit_num", true);?></UnitNumber>
+   <City>New York</City>
+   <State>New York</State>
+   <Zip><?php echo get_post_meta($post->ID, "nt_prop_zip", true);?></Zip>
    <Lat></Lat>
    <Long></Long>
-   <DisplayAddress><?php echo get_post_meta($post->ID, "nt_neighborhood", true);?></DisplayAddress>
+   <DisplayAddress>No</DisplayAddress>
   </Location>
   <ListingDetails>
-   <Status></Status>
+   <Status><?php realto_property_prop_tags(); ?></Status>
    <Price><?php listing_price();?></Price>
    <ListingUrl><?php the_permalink_rss() ?></ListingUrl>
    <MlsId><?php the_ID(); ?></MlsId>
@@ -50,7 +50,7 @@ query_posts( $args );?>
    <AlwaysEmailAgent></AlwaysEmailAgent>
   </ListingDetails>
   <RentalDetails>
-   <Availability><?php echo get_post_meta($post->ID, "nt_heating", true);?></Availability>
+   <Availability></Availability>
    <LeaseTerm></LeaseTerm>
    <DepositFees></DepositFees>
     <UtilitiesIncluded>
@@ -74,9 +74,9 @@ query_posts( $args );?>
     <PropertyType></PropertyType>
     <Title><?php the_title_rss() ?></Title>
     <Description><?php the_content(); ?></Description>
-    <Bedrooms></Bedrooms>
-    <Bathrooms></Bathrooms>
-    <FullBathrooms></FullBathrooms>
+    <Bedrooms><?php echo get_post_meta($post->ID, "nt_bedrooms", true);?></Bedrooms>
+    <Bathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></Bathrooms>
+    <FullBathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></FullBathrooms>
     <HalfBathrooms></HalfBathrooms>
     <LivingArea></LivingArea>
     <LotSize></LotSize>
@@ -84,28 +84,25 @@ query_posts( $args );?>
  </BasicDetails>
  <Pictures>
   <Picture>
-   <PictureUrl></PictureUrl>
+   <PictureUrl><?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?></PictureUrl>
    <Caption></Caption>
    </Picture><Picture>
-   <PictureUrl><?php if (has_post_thumbnail() ):
-      		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-      		echo $image[0]; ?>
-      		<?php endif; ?></PictureUrl>
+   <PictureUrl></PictureUrl>
    <Caption></Caption>
   </Picture>
  </Pictures>
  <Agent>
-   <FirstName><?php the_author() ?></FirstName>
-   <LastName></LastName>
+   <FirstName><?php the_author_meta('first_name'); ?></FirstName>
+   <LastName><?php the_author_meta('last_name'); ?></LastName>
    <EmailAddress><?php the_author_meta('user_email'); ?></EmailAddress>
    <PictureUrl></PictureUrl>
-   <OfficeLineNumber></OfficeLineNumber>
+   <OfficeLineNumber>646-397-3680</OfficeLineNumber>
    <MobilePhoneLineNumber></MobilePhoneLineNumber>
    <FaxLineNumber></FaxLineNumber>
  </Agent>
  <Office>
-  <BrokerageName></BrokerageName>
-  <BrokerPhone></BrokerPhone>
+  <BrokerageName>Resident Media Group</BrokerageName>
+  <BrokerPhone>646-397-3680</BrokerPhone>
   <StreetAddress></StreetAddress>
   <UnitNumber></UnitNumber>
   <City></City>
@@ -115,7 +112,7 @@ query_posts( $args );?>
  <OpenHouses>
  </OpenHouses>
  <Neighborhood>
-  <Name></Name>
+  <Name><?php echo get_post_meta($post->ID, "nt_neighborhood", true);?></Name>
   <Description></Description>
   </Neighborhood>
  <RichDetails>
