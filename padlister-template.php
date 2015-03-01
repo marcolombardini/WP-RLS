@@ -60,7 +60,6 @@ query_posts( $args );?>
 		<!-- More complete listings may get higher ranking and more exposure due to higher perceived quality-->
 		<OriginalURL><?php the_permalink_rss() ?></OriginalURL> <!-- The URL of this listing on your site. This is required if you'd like a listing to be posted directly to PadMapper with a link back to the original listing rather than being hosted on PadLister. Direct to PadMapper posting requires a partnership, since it requires more vetting on our end. Either way, you should include this in the feed if you have it, especially if you think you might change to direct to PadMapper at some point. -->
 		<ContactPhone>646-397-3680</ContactPhone> <!-- Like the contact email, this must go directly to the lister. If this isn't followed, or the renter is told to go to another site to contact the person, the entire feed will be banned. -->
-		
 		<MinLeaseLength></MinLeaseLength> <!-- Integer  --> <!-- These will default to 1 year if not specified otherwise  -->
 		<MinLeaseUnits></MinLeaseUnits> <!-- Month or Year  -->
 		<Unit><?php echo get_post_meta($post->ID, "nt_unit_num", true);?></Unit>
