@@ -1,29 +1,19 @@
 <?php
 /**
- * Zillow XML feed generator template. 
+ * Zillow XML feed generator template.
  */
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
 echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 <?php
-global $query_string;
-	$args = array(
-		'numberposts'     => '',
-		'posts_per_page'  => 45,
-		'offset'          => 0,
-		'cat'       	  =>  '',
-		'orderby'         => 'date',
-		'order'           => 'DESC',
-		'include'         => '',
-		'exclude'         => '',
-		'meta_key'        => '',
-		'meta_value'      => '',
-		'post_type'       => 'property',
-		'post_mime_type'  => '',
-		'post_parent'     => '',
-		'paged'		  => '',
-		'post_status'     => 'publish'
-	);
+ global $query_string;
+    $args = array(
+    'posts_per_page'  => 45,
+    'orderby'         => 'date',
+    'order'           => 'DESC',
+    'post_type'       => 'property',
+    'post_status'     => 'publish'
+);
 query_posts( $args );?>
 
 <Listings>
@@ -82,15 +72,27 @@ query_posts( $args );?>
     <LotSize></LotSize>
     <YearBuilt></YearBuilt>
  </BasicDetails>
- <Pictures>
-  <Picture>
-   <PictureUrl><?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?></PictureUrl>
-   <Caption></Caption>
-   </Picture><Picture>
-   <PictureUrl></PictureUrl>
-   <Caption></Caption>
+<?php  $args = array(
+            'post_parent'    => $post->ID,
+            'post_type'      => 'attachment',
+            'numberposts'    => -1, // show all
+            'post_status'    => 'any',
+            'post_mime_type' => 'image',
+            'orderby'        => 'menu_order',
+            'order'           => 'ASC'
+       );
+
+$images = get_posts($args);
+if($images) { ?>
+<Pictures>
+  <?php foreach($images as $image) { ?>
+   <Picture>
+    <PictureUrl><?php echo wp_get_attachment_url($image->ID); ?></PictureUrl>
+     <Caption></Caption>
   </Picture>
- </Pictures>
+  <?php } ?>
+</Pictures>
+<?php } ?>
  <Agent>
    <FirstName><?php the_author_meta('first_name'); ?></FirstName>
    <LastName><?php the_author_meta('last_name'); ?></LastName>
