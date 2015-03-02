@@ -8,7 +8,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 <?php
  global $query_string;
     $args = array(
-    'posts_per_page'  => 45,
+    'posts_per_page'  => -1,
     'orderby'         => 'date',
     'order'           => 'DESC',
     'post_type'       => 'property',
@@ -63,7 +63,7 @@ query_posts( $args );?>
   <BasicDetails>
     <PropertyType></PropertyType>
     <Title><?php the_title_rss() ?></Title>
-    <Description><?php the_content(); ?></Description>
+    <Description><![CDATA[<?php the_content(); ?>]]></Description>
     <Bedrooms><?php echo get_post_meta($post->ID, "nt_bedrooms", true);?></Bedrooms>
     <Bathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></Bathrooms>
     <FullBathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></FullBathrooms>
