@@ -8,13 +8,22 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 <?php
  global $query_string;
     $args = array(
+<<<<<<< Updated upstream
     'posts_per_page'  => -1,
+=======
+<<<<<<< HEAD
+    'posts_per_page'  => '-1',
+=======
+    'posts_per_page'  => -1,
+>>>>>>> origin/master
+>>>>>>> Stashed changes
     'orderby'         => 'date',
     'order'           => 'DESC',
     'post_type'       => 'property',
     'post_status'     => 'publish'
 );
 query_posts( $args );?>
+
 
 <Listings>
 <?php while( have_posts()) : the_post(); ?>

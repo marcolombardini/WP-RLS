@@ -75,4 +75,12 @@ if($images) { ?>
 		</Amenities>
 	</Listing>
 	<?php endwhile; ?>
+<<<<<<< Updated upstream
 </PadMapperFeed>
+=======
+<<<<<<< HEAD
+</PadMapperFeed>
+=======
+</PadMapperFeed>
+>>>>>>> origin/master
+>>>>>>> Stashed changes
