@@ -8,6 +8,6 @@ Are you a theme developer or real estate professional and want to test out the p
 
 #####This plugin is still in beta/testing. Use at your own risk.
 
-To see a list ofAggregators and information about xml specifications check out the wiki 
+To see a list of Aggregators and information about xml specifications check out the wiki 
 
 Special thanks to Jason Murray.
