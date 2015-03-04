@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name: wpREAP Real Estate Aggregator Plugin
- * Plugin URI: https://github.com/marcolombardini/wpreap
- * Description: This plugin is designed to create an XML File so real estate aggregators can syndicate listings from your WordPress powered website.
+ * Plugin Name: WP-RLS Real Estate Listings Syndicator
+ * Plugin URI: https://github.com/marcolombardini/WP-RLS
+ * Description: Creates an XML File so real estate professionals can syndicate listings from a WordPress powered website.
  * Author: Marco Lombardini
  * Author URI: http://marcolombardini.com
  * Author Email: marco.lombardini@gmail.com
