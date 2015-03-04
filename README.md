@@ -1,12 +1,14 @@
-##wpREAP - Real Estate Aggregator Plugin            
+##wpREAP - Real Estate Aggregator Plugin   
 
-This is a plugin designed to create an XML File so real estate aggregators can syndicate listings from your WordPress powered website.     
+Forget about re-entering listing information by hand. Now seamlessly connect to the listings databases of the biggest real estate aggregators such as Zillow, Trulia, PadMapper and update your listings effortlessly.       
+##Description     
+This plugin creates an XML File so real estate professionals can syndicate listings from a WordPress powered website.     
 
 The current version only supports one specific theme but can be easily customized to work with any WordPress template or theme that has real estate listings.     
 
 Are you a theme developer or real estate professional and want to test out the plugin? Send me an email to see how you can get a beta version for your site or theme or check out the wpREAP-Dev repo       
 
-#####This plugin is still in beta/testing. Use at your own risk.
+This plugin is still in beta/testing. Use at your own risk.
 
 To see a list of Aggregators and information about xml specifications check out the wiki 
 
