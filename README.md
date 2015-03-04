@@ -1,4 +1,4 @@
-##wpREAP - Real Estate Aggregator Plugin   
+##WP-RLS - Real Estate listings Syndicator   
 
 Forget about re-entering listing information by hand. Now seamlessly connect to the listings databases of the biggest real estate aggregators such as Zillow, Trulia, PadMapper and update your listings effortlessly.       
 ##Description     
