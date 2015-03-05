@@ -2,8 +2,7 @@
 /*
  * Plugin Name: WP-RLS Real Estate Listings Syndicator
  * Plugin URI: https://github.com/marcolombardini/WP-RLS
- * Description: Creates an XML File so real estate professionals can syndicate listings from a WordPress powered website.
- * Author: Marco Lombardini
+ * Description: Only use if your are comfortable editing PHP files and are familar with your theme 
  * Author URI: http://marcolombardini.com
  * Version: 0.1
  * Contributors: Jason Murray, Javier Correa
