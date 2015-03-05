@@ -10,16 +10,16 @@
  */
 
 function do_feed_zillow() {
-	load_template( ABSPATH . '/wp-content/plugins/wpreap/zillow-template.php' );
+	load_template( ABSPATH . '/wp-content/plugins/wprls/zillow-template.php' );
 }
 function do_feed_streeteasy() {
-	load_template( ABSPATH . '/wp-content/plugins/wpreap/streeteasy-template.php' );
+	load_template( ABSPATH . '/wp-content/plugins/wprls/streeteasy-template.php' );
 }
 function do_feed_hotpads() {
-	load_template( ABSPATH . '/wp-content/plugins/wpreap/hotpads-template.php' );
+	load_template( ABSPATH . '/wp-content/plugins/wprls/hotpads-template.php' );
 }
 function do_feed_padlister() {
-	load_template( ABSPATH . '/wp-content/plugins/wpreap/padlister-template.php' );
+	load_template( ABSPATH . '/wp-content/plugins/wprls/padlister-template.php' );
 }
 
 
