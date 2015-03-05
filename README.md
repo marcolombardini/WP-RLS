@@ -10,9 +10,10 @@ Are you a theme developer or real estate professional and want to test out the p
 
 ##Support      
 To see a list of Aggregators and information about xml specifications check out the wiki    
-Please add any bugs or feature requests to the issues tab    
-More information can be found on my site     
 
-This plugin is still in beta/testing. Use at your own risk.
+Please add any bugs or feature requests to the issues tab    
+
+##NOT READY FOR COMMERICAL USE
+Unless you know and are comfotable with PHP and editing plugin files. This plugin is still in beta/testing. Use at your own risk. 
 
 Special thanks to Jason Murray.
