@@ -70,15 +70,6 @@ function wprls_settings_init(  ) {
 		'wprls_pluginPage_section' 
 	);
  
-	add_settings_field( 
-		'wprls_firm_test', 
-		__( 'Test:', 'wprls' ), 
-		'wprls_firm_test_render', 
-		'pluginPage', 
-		'wprls_pluginPage_section' 
-	);
- 
- 
 }
  
 	
@@ -128,15 +119,6 @@ function wprls_firm_id_render(  ) {
 	$options = get_option( 'wprls_settings' );
 	?>
 	<input type='text' name='wprls_settings[wprls_firm_id]' value='<?php echo $options['wprls_firm_id']; ?>'>
-	<?php
- 
-}
- 
-function wprls_firm_test_render(  ) { 
- 
-	$options = get_option( 'wprls_settings' );
-	?>
-	<input type='text' name='wprls_settings[wprls_firm_test]' value='<?php echo $options['wprls_firm_test']; ?>'>
 	<?php
  
 }
