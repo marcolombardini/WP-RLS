@@ -22,8 +22,8 @@ query_posts( $args );?>
   <Location>
    <StreetAddress><?php echo $options['wprls_firm_name']; ?></StreetAddress>
    <UnitNumber></UnitNumber>
-   <City>New York</City>
-   <State>New York</State>
+   <City></City>
+   <State></State>
    <Zip></Zip>
    <Lat></Lat>
    <Long></Long>
