@@ -20,23 +20,23 @@ query_posts( $args );?>
 <?php while( have_posts()) : the_post(); ?>
  <Listing>
   <Location>
-   <StreetAddress><?php echo get_post_meta($post->ID, "nt_prop_add", true);?></StreetAddress>
-   <UnitNumber><?php echo get_post_meta($post->ID, "nt_unit_num", true);?></UnitNumber>
+   <StreetAddress><?php echo $options['wprls_firm_name']; ?></StreetAddress>
+   <UnitNumber></UnitNumber>
    <City>New York</City>
    <State>New York</State>
-   <Zip><?php echo get_post_meta($post->ID, "nt_prop_zip", true);?></Zip>
+   <Zip></Zip>
    <Lat></Lat>
    <Long></Long>
    <DisplayAddress>No</DisplayAddress>
   </Location>
   <ListingDetails>
-   <Status><?php realto_property_prop_tags(); ?></Status>
-   <Price><?php listing_price();?></Price>
-   <ListingUrl><?php the_permalink_rss() ?></ListingUrl>
-   <MlsId><?php the_ID(); ?></MlsId>
+   <Status></Status>
+   <Price></Price>
+   <ListingUrl></ListingUrl>
+   <MlsId></MlsId>
    <MlsName></MlsName>
    <VirtualTourUrl></VirtualTourUrl>
-   <ListingEmail><?php the_author_meta('user_email'); ?></ListingEmail>
+   <ListingEmail></ListingEmail>
    <AlwaysEmailAgent></AlwaysEmailAgent>
   </ListingDetails>
   <RentalDetails>
@@ -54,7 +54,7 @@ query_posts( $args );?>
     <SatTV></SatTV>
    </UtilitiesIncluded>
    <PetsAllowed>
-    <NoPets><?php echo get_post_meta($post->ID, "nt_parking", true);?></NoPets>
+    <NoPets></NoPets>
     <Cats></Cats>
     <SmallDogs></SmallDogs>
     <LargeDogs></LargeDogs>
@@ -62,11 +62,11 @@ query_posts( $args );?>
   </RentalDetails>
   <BasicDetails>
     <PropertyType></PropertyType>
-    <Title><?php the_title_rss() ?></Title>
+    <Title></Title>
     <Description><![CDATA[<?php the_content(); ?>]]></Description>
-    <Bedrooms><?php echo get_post_meta($post->ID, "nt_bedrooms", true);?></Bedrooms>
-    <Bathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></Bathrooms>
-    <FullBathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></FullBathrooms>
+    <Bedrooms></Bedrooms>
+    <Bathrooms></Bathrooms>
+    <FullBathrooms></FullBathrooms>
     <HalfBathrooms></HalfBathrooms>
     <LivingArea></LivingArea>
     <LotSize></LotSize>
@@ -94,17 +94,17 @@ if($images) { ?>
 </Pictures>
 <?php } ?>
  <Agent>
-   <FirstName><?php the_author_meta('first_name'); ?></FirstName>
-   <LastName><?php the_author_meta('last_name'); ?></LastName>
-   <EmailAddress><?php the_author_meta('user_email'); ?></EmailAddress>
+   <FirstName></FirstName>
+   <LastName></LastName>
+   <EmailAddress></EmailAddress>
    <PictureUrl></PictureUrl>
-   <OfficeLineNumber>646-397-3680</OfficeLineNumber>
+   <OfficeLineNumber></OfficeLineNumber>
    <MobilePhoneLineNumber></MobilePhoneLineNumber>
    <FaxLineNumber></FaxLineNumber>
  </Agent>
  <Office>
-  <BrokerageName>Resident Media Group</BrokerageName>
-  <BrokerPhone>646-397-3680</BrokerPhone>
+  <BrokerageName></BrokerageName>
+  <BrokerPhone></BrokerPhone>
   <StreetAddress></StreetAddress>
   <UnitNumber></UnitNumber>
   <City></City>
@@ -114,7 +114,7 @@ if($images) { ?>
  <OpenHouses>
  </OpenHouses>
  <Neighborhood>
-  <Name><?php echo get_post_meta($post->ID, "nt_neighborhood", true);?></Name>
+  <Name></Name>
   <Description></Description>
   </Neighborhood>
  <RichDetails>
