@@ -20,7 +20,7 @@ query_posts( $args );?>
 <?php while( have_posts()) : the_post(); ?>
  <Listing>
   <Location>
-   <StreetAddress><?php echo $options['wprls_firm_name']; ?></StreetAddress>
+   <StreetAddress></StreetAddress>
    <UnitNumber></UnitNumber>
    <City></City>
    <State></State>
@@ -103,7 +103,11 @@ if($images) { ?>
    <FaxLineNumber></FaxLineNumber>
  </Agent>
  <Office>
-  <BrokerageName></BrokerageName>
+  <BrokerageName><?php
+$options = get_option( 'wprls_settings' );
+echo $option = $options['wprls_firm_name'];
+?>
+</BrokerageName>
   <BrokerPhone></BrokerPhone>
   <StreetAddress></StreetAddress>
   <UnitNumber></UnitNumber>
