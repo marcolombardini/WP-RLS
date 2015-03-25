@@ -19,25 +19,25 @@ query_posts( $args );?>
  <streeteasy version="1.6">
 <?php while( have_posts()) : the_post(); ?>
   <properties>
-    <property status="active" type="sale" id="<?php the_ID(); ?>" url="<?php the_permalink_rss() ?>">
+    <property status="Required" type="sale" id="Required" url="Required">
       <location>
-        <address></address>
-        <apartment></apartment>
-        <city></city>
-        <state></state>
-        <zipcode></zipcode>
-        <neighborhood><?php echo get_post_meta($post->ID, "nt_neighborhood", true);?></neighborhood>
+        <address>Required</address>
+        <apartment>Required</apartment>
+        <city>Required</city>
+        <state>Required</state>
+        <zipcode>Required</zipcode>
+        <neighborhood>Required</neighborhood>
       </location>
       <details>
         <mlsName></mlsName>
-        <mlsId><?php the_ID(); ?></mlsId>
-        <price></price>
+        <mlsId>Required</mlsId>
+        <price>Required</price>
         <maintenance></maintenance>
         <exclusive/>
         <taxes></taxes>
-        <bedrooms></bedrooms>
-        <bathrooms></bathrooms>
-        <totalrooms></totalrooms>
+        <bedrooms>Required</bedrooms>
+        <bathrooms>Required</bathrooms>
+        <totalrooms>Required</totalrooms>
         <squareFeet></squareFeet>
         <listedOn></listedOn>
         <description>
@@ -76,14 +76,14 @@ if($images) { ?>
       </media>
 <?php } ?><?php } ?>
       <agents>
-        <agent id="MB12514">
+        <agent id="Required">
          <name></name>
          <photo></photo>
          <email></email>
-         <lead_email></lead_email>
+         <lead_email>Required</lead_email>
          <url></url>
         </agent>
-        <agent id="MW12312">
+        <agent id="Required">
          <name></name>
          <photo></photo>
          <email></email>
