@@ -4,7 +4,7 @@ Forget about re-entering listing information by hand. Now seamlessly connect to 
 ##Description     
 This plugin creates an XML File so real estate professionals can syndicate listings from a WordPress powered website.   
 
-To see the feed in action go to www.yourwebsitename.com/?feed=zillow
+To see the feed in action go to yoursite.com/?feed=zillow (Currently supports Zillow, HotPads, Padlister & Streeteasy
 
 The current version only supports one specific theme but can be easily customized to work with any WordPress template or theme that has real estate listings.     
 
