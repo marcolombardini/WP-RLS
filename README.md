@@ -18,6 +18,8 @@ Please add any bugs or feature requests to the issues tab
 ##NOT READY FOR COMMERICAL USE
 Unless you know and are comfotable with PHP and editing plugin files. This plugin is still in beta/testing. Use at your own risk. 
 
+##PRROF OF CONCEPT
+
 ##Customization Requests     
 I'm available to customize feeds to your theme. Contact me for availablitly.  
 
