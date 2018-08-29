@@ -1,6 +1,7 @@
 <?php
 /**
  * Zillow XML feed generator template.
+ * Realto Theme
  */
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
