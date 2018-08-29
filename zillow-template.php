@@ -15,33 +15,32 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
     'post_status'     => 'publish'
 );
 query_posts( $args );?>
-
 <Listings>
 <?php while( have_posts()) : the_post(); ?>
  <Listing>
   <Location>
-   <StreetAddress></StreetAddress>
+   <StreetAddress><?php echo get_post_meta($post->ID, "nt_prop_add", true);?></StreetAddress>
    <UnitNumber></UnitNumber>
-   <City></City>
+   <City>New York</City>
    <State></State>
-   <Zip></Zip>
+   <Zip><?php echo get_post_meta($post->ID, "nt_prop_zip", true);?></Zip>
    <Lat></Lat>
    <Long></Long>
-   <DisplayAddress>No</DisplayAddress>
+   <DisplayAddress></DisplayAddress>
   </Location>
   <ListingDetails>
-   <Status></Status>
-   <Price></Price>
-   <ListingUrl></ListingUrl>
-   <MlsId></MlsId>
+   <Status><?php echo get_post_meta($post->ID, "nt_status", true);?></Status>
+   <Price><?php echo rwmb_meta( wprls_price); ?></Price>
+   <ListingUrl><?php the_permalink(); ?></ListingUrl>
+   <MlsId><?php the_ID(); ?></MlsId>
    <MlsName></MlsName>
    <VirtualTourUrl></VirtualTourUrl>
-   <ListingEmail></ListingEmail>
+   <ListingEmail><?php the_author_meta('user_email'); ?></ListingEmail>
    <AlwaysEmailAgent></AlwaysEmailAgent>
   </ListingDetails>
   <RentalDetails>
-   <Availability></Availability>
-   <LeaseTerm></LeaseTerm>
+   <Availability>Required</Availability>
+   <LeaseTerm>Required</LeaseTerm>
    <DepositFees></DepositFees>
     <UtilitiesIncluded>
     <Water></Water>
@@ -54,7 +53,7 @@ query_posts( $args );?>
     <SatTV></SatTV>
    </UtilitiesIncluded>
    <PetsAllowed>
-    <NoPets></NoPets>
+    <NoPets><?php echo get_post_meta($post->ID, "nt_parking", true);?></NoPets>
     <Cats></Cats>
     <SmallDogs></SmallDogs>
     <LargeDogs></LargeDogs>
@@ -62,10 +61,10 @@ query_posts( $args );?>
   </RentalDetails>
   <BasicDetails>
     <PropertyType></PropertyType>
-    <Title></Title>
+    <Title><?php the_title();?></Title>
     <Description><![CDATA[<?php the_content(); ?>]]></Description>
-    <Bedrooms></Bedrooms>
-    <Bathrooms></Bathrooms>
+    <Bedrooms><?php echo get_post_meta($post->ID, "nt_bedrooms", true);?></Bedrooms>
+    <Bathrooms><?php echo get_post_meta($post->ID, "nt_bathrooms", true);?></Bathrooms>
     <FullBathrooms></FullBathrooms>
     <HalfBathrooms></HalfBathrooms>
     <LivingArea></LivingArea>
@@ -94,21 +93,23 @@ if($images) { ?>
 </Pictures>
 <?php } ?>
  <Agent>
-   <FirstName></FirstName>
-   <LastName></LastName>
-   <EmailAddress></EmailAddress>
+   <FirstName>Required</FirstName>
+   <LastName>Required</LastName>
+   <EmailAddress><?php the_author_meta('user_email'); ?></EmailAddress>
    <PictureUrl></PictureUrl>
    <OfficeLineNumber></OfficeLineNumber>
-   <MobilePhoneLineNumber></MobilePhoneLineNumber>
+   <MobilePhoneLineNumber>Required</MobilePhoneLineNumber>
    <FaxLineNumber></FaxLineNumber>
  </Agent>
  <Office>
   <BrokerageName><?php
 $options = get_option( 'wprls_settings' );
 echo $option = $options['wprls_firm_name'];
-?>
-</BrokerageName>
-  <BrokerPhone></BrokerPhone>
+?></BrokerageName>
+  <BrokerPhone><?php
+$options = get_option( 'wprls_settings' );
+echo $option = $options['wprls_firm_phone'];
+?></BrokerPhone>
   <StreetAddress></StreetAddress>
   <UnitNumber></UnitNumber>
   <City></City>
